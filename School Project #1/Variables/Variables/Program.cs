@@ -34,7 +34,7 @@ namespace Variables
                 }
                 else if (x == 3)
                 {
-                    Console.WriteLine("You die.");
+                    Console.WriteLine("You die like an idiot.");
                 }
                 else
                 {
