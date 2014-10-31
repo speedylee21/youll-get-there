@@ -11,14 +11,27 @@ namespace Variables
         static void Main(string[] args)
         {
             Console.WriteLine("Hello Jeremiah. What door do you want to open (1,2, or 3)?");
+            string DoorNumber=Console.ReadLine();
+            while (DoorNumber !="1"&&DoorNumber!="2"&&DoorNumber!="3")
+            {
+                Console.WriteLine("Give me a fucking answer!");
+                DoorNumber = Console.ReadLine();
+            }
             try
             {
-                int x = int.Parse(Console.ReadLine());
+                int x = int.Parse(DoorNumber);
                 if (x == 1)
                 {
                     
                     Console.WriteLine("You won a car! Do you want to open the door? (Yes or No)");
-                    string y = (Console.ReadLine()).ToLower();
+                    string Answer = Console.ReadLine();
+                    while (Answer != "Yes" && Answer != "No")
+                    {
+                        Console.WriteLine("There's no getting out of this...");
+                        Answer = Console.ReadLine();
+                    }
+
+                    string y = (Answer).ToLower();
                     if (y == "yes")
                         Console.WriteLine("You died in a massive explosion.");
                     else if (y == "no")
